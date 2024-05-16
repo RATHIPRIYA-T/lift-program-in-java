@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Total Number of floors:");
+		int floor = sc.nextInt();
+		System.out.println("Enter Your current floor");
+		int current = sc.nextInt();
+		System.out.println("Enter your needed action U/D");
+		String str = sc.next();
+		char c[] = str.toCharArray();
+		for(int i=0;i<c.length;i++)
+		{
+		    if((c[i]=='U' || c[i]=='u') && current<floor)
+		    current++;
+		    else if((c[i]=='D' || c[i]=='d') && current>0)
+		    current--;
+		}
+		if(current==0)
+		System.out.println("You are in the Ground Floor");
+		else
+		System.out.println("You are in the Floor: "+current);
+	}
+}
+
+
+
+
